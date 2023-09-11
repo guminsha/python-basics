@@ -8,6 +8,10 @@ print(car_2.model)
 print(car_2.year)
 print(car_2.color)
 
-car_2.drive()
-car_1.stop()
+#car_2.drive()
+#car_1.stop()
 
+Car.wheels = 2
+
+print(car_1.wheels)
+print(car_2.wheels)
