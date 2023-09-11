@@ -1,0 +1,2 @@
+class Organism:
+    alive = True
