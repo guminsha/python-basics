@@ -6,7 +6,7 @@ dessert = ["cake", "ice cream"]
 
 food = [drinks, dinner, dessert]
 
-#print(food)
+# print(food)
 
 for i in food:
     for j in i:

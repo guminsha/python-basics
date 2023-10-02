@@ -1,10 +1,10 @@
-# while loop = a statement that will execute it's block of code,
+# while loop = a statement that will execute its block of code,
 #              as long as it's condition remains true
 
 name = ""
-#name = None
+# name = None
 
-#while not name:
+# while not name:
 while len(name) == 0:
     name = input("Enter your name: ")
 
