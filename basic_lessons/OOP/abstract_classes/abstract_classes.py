@@ -8,11 +8,11 @@ import car
 import motorcycle
 import vehicle
 
-#vehicle = vehicle.Vehicle()
+# vehicle = vehicle.Vehicle()
 car = car.Car()
 motorcycle = motorcycle.Motorcycle()
 
-#vehicle.go()
+# vehicle.go()
 car.go()
 motorcycle.go()
 

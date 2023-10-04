@@ -2,8 +2,7 @@
 
 temp = int(input("What's the temperature outside?: "))
 
-if not(temp >= 0 and temp <= 30):
+if not (temp >= 0 and temp <= 30):
     print("The temperature is good today, enjoy!")
-elif not(temp < 0 or temp > 30):
+elif not (temp < 0 or temp > 30):
     print("The temperature is bad today, stay inside!")
-

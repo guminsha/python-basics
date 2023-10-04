@@ -12,8 +12,8 @@ import shutil
 path = "folder"
 
 try:
-    #os.rmdir(path)     # delete a empty directory
-    shutil.rmtree(path) # delete a directory that contains files
+    # os.rmdir(path)     # delete a empty directory
+    shutil.rmtree(path)  # delete a directory that contains files
 except FileNotFoundError as e:
     print(e)
     print("That file was not found")
@@ -24,4 +24,4 @@ except OSError as e:
     print(e)
     print("You cannot delete that using that function")
 else:
-    print(path+" was deleted")
+    print(path + " was deleted")

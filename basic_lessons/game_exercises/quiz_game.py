@@ -23,6 +23,8 @@ def check_awser(answer, guess):
     else:
         print("WRONG!")
         return 0
+
+
 def display_score(correct_guesses, guesses):
     print("-------------------------------")
     print("-----------RESULTS-------------")
@@ -36,10 +38,11 @@ def display_score(correct_guesses, guesses):
         print(i, end=" ")
     print()
 
-    score = int((correct_guesses/len(questions))*100)
-    print("Your score is: "+str(score)+"%")
+    score = int((correct_guesses / len(questions)) * 100)
+    print("Your score is: " + str(score) + "%")
 
     play_again()
+
 
 def play_again():
     response = input("Do you want to play again? (Y/N): ").upper()
@@ -50,6 +53,7 @@ def play_again():
         quit()
     else:
         play_again()
+
 
 questions = {
     "1. Who created Python? ": "A",
