@@ -12,7 +12,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # print("Running this module one directly")
+    print("Running this module one directly")
     main()
-# else:
-#     print("Running other module indirectly")
+else:
+    print("Running other module indirectly")
