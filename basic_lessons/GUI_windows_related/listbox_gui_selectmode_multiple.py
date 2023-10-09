@@ -19,11 +19,8 @@ def add():
 
 
 def delete():
-    food = []
-
     for index in reversed(listbox.curselection()):  # the index changes if starts normally (index 2 becomes 1 after
-                                                    # first delete)
-        listbox.delete(index)
+        listbox.delete(index)  # first delete)
     listbox.config(height=listbox.size())
 
 
@@ -60,8 +57,8 @@ add_button = Button(window,
 add_button.pack()
 
 delete_button = Button(window,
-                    text="Delete",
-                    command=delete)
+                       text="Delete",
+                       command=delete)
 delete_button.pack()
 
 window.mainloop()
