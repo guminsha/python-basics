@@ -48,8 +48,8 @@ add_button = Button(window,
 add_button.pack()
 
 delete_button = Button(window,
-                    text="Delete",
-                    command=delete)
+                       text="Delete",
+                       command=delete)
 delete_button.pack()
 
 window.mainloop()
