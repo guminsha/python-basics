@@ -12,7 +12,6 @@ hot_image = PhotoImage(file="src\\fire.png")
 hot_label = Label(image=hot_image)
 hot_label.pack()
 
-
 scale = Scale(window,
               from_=100,
               to=0,
@@ -26,7 +25,7 @@ scale = Scale(window,
               fg="#FF1C00",
               bg="#111111")
 # scale.set(50)
-scale.set((scale["from"] - scale["to"])/2+scale["to"]) # fancy way to make it always appears in the middle
+scale.set((scale["from"] - scale["to"]) / 2 + scale["to"])  # fancy way to make it always appears in the middle
 
 scale.pack()
 
