@@ -11,4 +11,4 @@ old_window = Tk()
 
 Button(old_window, text="New Window", command=create_window).pack()
 
-old_window.mainloop()
+old_window.mainloop()  # loops everything above this until it closes
