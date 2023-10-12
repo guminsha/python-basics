@@ -4,7 +4,7 @@ from tkinter import *
 
 window = Tk()
 
-photo = PhotoImage(file="src/bg.png")  # location
+photo = PhotoImage(file="assets/bg.png")  # location
 
 window.geometry("1340x860")  # need to search about auto resize
 window.title("Label studies")

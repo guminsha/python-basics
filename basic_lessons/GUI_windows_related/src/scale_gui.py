@@ -8,7 +8,7 @@ def submit():
 window = Tk()
 window.title("Slide")
 
-hot_image = PhotoImage(file="src\\fire.png")
+hot_image = PhotoImage(file="assets/fire.png")
 hot_label = Label(image=hot_image)
 hot_label.pack()
 
@@ -29,7 +29,7 @@ scale.set((scale["from"] - scale["to"]) / 2 + scale["to"])  # fancy way to make 
 
 scale.pack()
 
-cold_image = PhotoImage(file="src\\ice.png")
+cold_image = PhotoImage(file="assets/ice.png")
 cold_label = Label(image=cold_image)
 cold_label.pack()
 

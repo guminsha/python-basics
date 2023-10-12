@@ -7,7 +7,7 @@ window = Tk()  # instantiate an instance of a window
 window.geometry("1280x720")
 window.title("First GUI program")
 
-icon = PhotoImage(file="src/icon.png")  # between Tk() and mainloop()
+icon = PhotoImage(file="assets/icon.png")  # between Tk() and mainloop()
 window.iconphoto(True, icon)
 
 window.config(background="#4734ed")  # or color's name

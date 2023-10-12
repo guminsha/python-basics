@@ -19,9 +19,9 @@ def order():
 window = Tk()
 window.title("Radio Buttons")
 
-pizza_image = PhotoImage(file="src\\pizza.png")
-hamburger_image = PhotoImage(file="src\\hamburger.png")
-hotdog_image = PhotoImage(file="src\\hotdog.png")
+pizza_image = PhotoImage(file="assets/pizza.png")
+hamburger_image = PhotoImage(file="assets/hamburger.png")
+hotdog_image = PhotoImage(file="assets/hotdog.png")
 
 food_images = [pizza_image, hamburger_image, hotdog_image]
 

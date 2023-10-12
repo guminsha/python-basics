@@ -13,7 +13,7 @@ window = Tk()
 x = BooleanVar()
 # x = StringVar()
 # x = IntVar() # Default is 1 or 0
-photo = PhotoImage(file="src/icon.png")
+photo = PhotoImage(file="assets/icon.png")
 
 checkbox = Checkbutton(window,
                        text="I agree to something",

@@ -42,9 +42,9 @@ def paste():
 
 window = Tk()
 
-open_image = PhotoImage(file="src\\folder.png")
-save_image = PhotoImage(file="src\\flopdisk.png")
-exit_image = PhotoImage(file="src\\exit.png")
+open_image = PhotoImage(file="assets/folder.png")
+save_image = PhotoImage(file="assets/flopdisk.png")
+exit_image = PhotoImage(file="assets/exit.png")
 
 menu_bar = Menu(window)
 window.config(menu=menu_bar)

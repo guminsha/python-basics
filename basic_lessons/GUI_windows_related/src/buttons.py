@@ -11,7 +11,7 @@ def click():
 
 window = Tk()
 
-photo = PhotoImage(file="src/icon.png")
+photo = PhotoImage(file="assets/icon.png")
 
 button = Button(window,
                 text="Click here!",
