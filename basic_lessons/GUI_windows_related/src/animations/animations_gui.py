@@ -10,8 +10,8 @@ y_velocity = random.randint(1, 5)
 window = Tk()
 window.resizable(False, False)
 
-alien = PhotoImage(file="assets/alien.png")
-space = PhotoImage(file="assets/cartoon_space.png")
+alien = PhotoImage(file="../assets/alien.png")
+space = PhotoImage(file="../assets/cartoon_space.png")
 
 canvas = Canvas(window, width=WIDTH, height=HEIGHT)
 canvas.pack()
