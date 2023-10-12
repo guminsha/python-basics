@@ -21,10 +21,10 @@ def start():
     speed = 10
     while download < gigabytes:
         time.sleep(0.05)
-        bar["value"] += (speed/gigabytes)*100
+        bar["value"] += (speed / gigabytes) * 100
         download += speed
-        percent.set(str(int((download/gigabytes) * 100))+"%")
-        task.set(str(download)+"/"+str(gigabytes)+" GB completed")
+        percent.set(str(int((download / gigabytes) * 100)) + "%")
+        task.set(str(download) + "/" + str(gigabytes) + " GB completed")
         window.update_idletasks()
 
 

@@ -18,7 +18,6 @@ canvas.create_line(0, 250, 500, 250, width=30)
 canvas.create_oval(190, 190, 310, 310, fill="black", width=10)
 canvas.create_oval(200, 200, 300, 300, fill="white", width=10)
 
-
 canvas.pack()
 
 window.mainloop()
