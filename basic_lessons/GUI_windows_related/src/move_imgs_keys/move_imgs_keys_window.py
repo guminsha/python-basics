@@ -17,21 +17,21 @@ def move_right(event):
     label.place(x=label.winfo_x()+10, y=label.winfo_y())
 
 
-windows = Tk()
-windows.geometry("500x500")
+window = Tk()
+window.geometry("500x500")
 
-windows.bind("<w>", move_up)
-windows.bind("<a>", move_left)
-windows.bind("<s>", move_down)
-windows.bind("<d>", move_right)
-windows.bind("<Up>", move_up)
-windows.bind("<Left>", move_left)
-windows.bind("<Down>", move_down)
-windows.bind("<Right>", move_right)
+window.bind("<w>", move_up)
+window.bind("<a>", move_left)
+window.bind("<s>", move_down)
+window.bind("<d>", move_right)
+window.bind("<Up>", move_up)
+window.bind("<Left>", move_left)
+window.bind("<Down>", move_down)
+window.bind("<Right>", move_right)
 
 car = PhotoImage(file="../assets/car.png")
 
-label = Label(windows, image=car)
+label = Label(window, image=car)
 label.place(x=0, y=0)
 
-windows.mainloop()
+window.mainloop()
