@@ -32,11 +32,11 @@ while True:
     label_coordinates.config(text=f"X: {int(coordinates[0])} Y: {int(coordinates[1])}")
     label_speed.config(text=f"Speed X: {x_velocity} Speed Y: {y_velocity}")
 
-    if coordinates[0] > (WIDTH-(image_width-5)):
+    if coordinates[0] > (WIDTH-image_width):
         x_velocity = -(random.randint(1, 5))
     if coordinates[0] < 0:
         x_velocity = random.randint(1, 5)
-    if coordinates[1] > (HEIGHT-(image_height-5)):
+    if coordinates[1] > (HEIGHT-image_height):
         y_velocity = -(random.randint(1, 5))
     if coordinates[1] < 0:
         y_velocity = random.randint(1, 5)
