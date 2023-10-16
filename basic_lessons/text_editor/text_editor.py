@@ -6,7 +6,7 @@ from tkinter.filedialog import *
 
 
 def change_color():
-    color = colorchooser.askcolor(title="pick a color...or else")
+    color = colorchooser.askcolor(title="Pick a color")
     text_area.config(fg=color[1])
 
 
@@ -20,36 +20,30 @@ def new_file():
 
 
 def open_file():
-    file = askopenfilename(defaultextension=".txt", file=[("All Files", "*.*"), ("Text Documents", "*.txt")])
+    file = askopenfilename(defaultextension="*.txt", filetypes=[("All files", "*.*"), ("Text Documents", ".txt .log")])
 
-    if file is None:
-        return
+    try:
+        window.title(os.path.basename(file))  # makes our window title match the file's name
+        text_area.delete(1.0, END)
 
-    else:
-        try:
-            window.title(os.path.basename(file))
-            text_area.delete(1.0, END)
+        file = open(file, "r")
 
-            file = open(file, "r")
+        text_area.insert(1.0, file.read())
 
-            text_area.insert(1.0, file.read())
+    except UnicodeError as e:
+        print(e)
+        print("Failed to read file")
 
-        except Exception:
-            print("couldn't read file")
-
-        finally:
-            file.close()
+    finally:
+        file.close()
 
 
 def save_file():
-    file = filedialog.asksaveasfilename(initialfile='unititled.txt',
-                                        defaultextension=".txt",
-                                        filetypes=[("All Files", "*.*"),
-                                                   ("Text Documents", "*.txt")])
-
+    file = filedialog.asksaveasfilename(initialfile="untitled.txt",
+                                    defaultextension=".txt",
+                                    filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")])
     if file is None:
         return
-
     else:
         try:
             window.title(os.path.basename(file))
@@ -57,8 +51,9 @@ def save_file():
 
             file.write(text_area.get(1.0, END))
 
-        except Exception:
-            print("couldn't save file")
+        except Exception as e:
+            print(e)
+            print("Failed to save file")
 
         finally:
             file.close()
@@ -77,30 +72,31 @@ def paste():
 
 
 def about():
-    showinfo("About this program", "This is a program written by YOUUUUU!!!")
+    showinfo("About this program", "This is a text editor to train Python")
 
 
-def quit():
+def quit_program():
     window.destroy()
 
 
 window = Tk()
-window.title("Text editor program")
+window.title("Text editor")
+
 file = None
 
 window_width = 500
 window_height = 500
-screen_width = window.winfo_screenwidth()
-screen_height = window.winfo_screenheight()
+screen_width = window.winfo_screenwidth()  # Gets user screen width
+screen_height = window.winfo_screenheight()  # Gets user screen height
 
 x = int((screen_width / 2) - (window_width / 2))
 y = int((screen_height / 2) - (window_height / 2))
 
-window.geometry("{}x{}+{}+{}".format(window_width, window_height, x, y))
+window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+# 500x500+(x-axis position)+(y-axis position) = spawn at center
 
 font_name = StringVar(window)
 font_name.set("Arial")
-
 font_size = StringVar(window)
 font_size.set("25")
 
@@ -130,11 +126,12 @@ window.config(menu=menu_bar)
 
 file_menu = Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="File", menu=file_menu)
+
 file_menu.add_command(label="New", command=new_file)
 file_menu.add_command(label="Open", command=open_file)
 file_menu.add_command(label="Save", command=save_file)
 file_menu.add_separator()
-file_menu.add_command(label="Exit", command=quit)
+file_menu.add_command(label="Quit", command=quit_program)
 
 edit_menu = Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="Edit", menu=edit_menu)
