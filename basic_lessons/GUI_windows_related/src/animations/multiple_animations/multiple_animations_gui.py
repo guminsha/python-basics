@@ -2,7 +2,6 @@ from tkinter import *
 import time
 from ball import *
 
-
 WIDTH = 500
 HEIGHT = 500
 
