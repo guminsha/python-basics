@@ -40,8 +40,8 @@ def open_file():
 
 def save_file():
     file = filedialog.asksaveasfilename(initialfile="untitled.txt",
-                                    defaultextension=".txt",
-                                    filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")])
+                                        defaultextension=".txt",
+                                        filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")])
     if file is None:
         return
     else:
